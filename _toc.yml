@@ -3,5 +3,10 @@
 
 format: jb-book
 root: intro
-chapters:
-- glob: 0?_*
+parts:
+  - caption: Fundamentals of X-ray imaging
+    chapters:
+    - glob: 0?_*
+  - caption: Exercises and demos
+    chapters:
+    - file: UMPA_demo.ipynb
