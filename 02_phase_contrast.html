@@ -168,13 +168,18 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">PhD Lectures on X-ray Imaging</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="01_attenuation_based_imaging.html">Attenuation-based X-ray imaging</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">X-ray phase contrast</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03_modulation_methods.html">Modulation-based imaging methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04_far_field_methods.html">Far-field imaging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="05_tomography.html">X-ray tomography</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06_x-ray_detection.html">X-ray detection</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercises and demos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="UMPA_demo.html">UMPA demo</a></li>
 </ul>
 
     </div>
@@ -351,9 +356,17 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="x-ray-phase-contrast">
 <h1>X-ray phase contrast<a class="headerlink" href="#x-ray-phase-contrast" title="Permalink to this heading">#</a></h1>
-<p>General introduction of X-ray phase-contrast methods</p>
+<p>General introduction to X-ray phase-contrast methods</p>
 <section id="x-rays-as-waves">
 <h2>X-rays as waves<a class="headerlink" href="#x-rays-as-waves" title="Permalink to this heading">#</a></h2>
+<p>Good references for this section:</p>
+<ul class="simple">
+<li><p>Detailed treatment of Fourier Optics: Goodman<span id="id1">[<a class="reference internal" href="#id18" title="Joseph W Goodman. Introduction to Fourier optics. Roberts and Company publishers, 2005.">1</a>]</span></p></li>
+<li><p>The “bible of optics”: Born &amp; Wolff<span id="id2">[<a class="reference internal" href="#id12" title="Max Born and Emil Wolf. Principles of Optics: Electromagnetic Theory of Propagation, Interference and Diffraction of Light. Cambridge University Press, 7th edition, 1999.">2</a>]</span></p></li>
+<li><p>Chapter 8 of excellent Caltech course notes: Blandford &amp; Thorne<span id="id3">[<a class="reference internal" href="#id28" title="Roger D Blandford and Kip S Thorne. Applications of classical physics. lecture notes, California Institute of Technology, 2012. URL: http://www.pmaweb.caltech.edu/Courses/ph136/yr2012/, doi:10.1142/9781860945359_0007.">3</a>]</span></p></li>
+<li><p>Transport of intensities: Teague<span id="id4">[<a class="reference internal" href="#id20" title="Michael R Teague. Deterministic phase retrieval: a Green's function solution. J. Opt. Soc. Am., 73(11):1434, nov 1983. doi:10.1364/JOSA.73.001434.">4</a>]</span> and Paganin et al.<span id="id5">[<a class="reference internal" href="#id19" title="David Paganin. Coherent X-ray optics. Number 6. Oxford University Press, USA, 2006.">5</a>]</span></p></li>
+<li><p>Interesting relationship used for derivation of many results in the Fresnel regime: <span id="id6">[<a class="reference internal" href="#id21" title="Jean-Pierre Guigay. Fourier-transform analysis of fresnel diffraction patterns and in-line holograms. Optik, 49:121–125, 1977.">6</a>]</span></p></li>
+</ul>
 <p>Helmholtz (wave) equation can be derived from Maxwell’s equations.</p>
 <p>The solution can be expressed in terms of a self-consistent integral equation involving a Green function, which represent the solution for a point source emitter.</p>
 <section id="x-ray-propagation-in-free-space">
@@ -375,10 +388,12 @@ document.write(`
 <h2>Propagation-based phase-contrast<a class="headerlink" href="#propagation-based-phase-contrast" title="Permalink to this heading">#</a></h2>
 <section id="the-paganin-formula">
 <h3>The Paganin formula<a class="headerlink" href="#the-paganin-formula" title="Permalink to this heading">#</a></h3>
-<p>Transport of intensities with a single material assumption</p>
+<p>Transport of intensities with a single material assumption<span id="id7">[<a class="reference internal" href="#id14" title="D Paganin, S C Mayo, T E Gureyev, P R Miller, and S W Wilkins. Simultaneous phase and amplitude extraction from a single defocused image of a homogeneous object. J. Microsc., 206(Pt 1):33–40, April 2002.">7</a>]</span></p>
 </section>
 <section id="in-line-holography">
 <h3>In-line holography<a class="headerlink" href="#in-line-holography" title="Permalink to this heading">#</a></h3>
+<p>Digital Inline holography (e.g. for soft X-ray microscopy at BESSY<span id="id8">[<a class="reference internal" href="#id15" title="A Rosenhahn, F Staier, T Nisius, D Schäfer, R Barth, C Christophis, L M Stadler, S Streit-Nierobisch, C Gutt, A P Mancuso, and Others. Digital In-line Holography with femtosecond VUV radiation provided by the free-electron laser FLASH. Opt. Express, 17(10):8220–8228, 2009. doi:10.1364/oe.17.008220.">8</a>]</span></p>
+<p>Linearization of transmittance function -&gt; contrast transfer function formalism<span id="id9">[<a class="reference internal" href="#id13" title="Peter Cloetens, W Ludwig, José Baruchel, D Van Dyck, J Van Landuyt, J P Guigay, and Michel Schlenker. Holotomography: Quantitative phase tomography with micrometer resolution using hard synchrotron radiation x rays. Appl. Phys. Lett., 75:2912, 1999.">9</a>]</span></p>
 </section>
 </section>
 <section id="coherence">
@@ -386,9 +401,41 @@ document.write(`
 <p>Real sources are not point-like and are not monochromatic. Departure from ideal conditions can be quantified and its effect on the robustness of imaging methods can be evaluated.</p>
 <section id="longitudinal-coherence-polychromaticity">
 <h3>Longitudinal coherence - polychromaticity<a class="headerlink" href="#longitudinal-coherence-polychromaticity" title="Permalink to this heading">#</a></h3>
+<p>For X-rays, different wavelengths normally have no phase relationships. As a consequence all measurements made with polychromatic x-rays are simply the sum, in intensity, of all the indidual frequency components. This consideration is still compatible with the concept of “longitudinal coherence”, which quantifies the lenthscales over which a wavefield can interfere with itself along the propagation direction. For imaging purposes, this</p>
 </section>
 <section id="transverse-coherence-mutual-intensity">
 <h3>Transverse coherence - mutual intensity<a class="headerlink" href="#transverse-coherence-mutual-intensity" title="Permalink to this heading">#</a></h3>
+<div class="docutils container" id="id10">
+<dl class="citation">
+<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Joseph W Goodman. <em>Introduction to Fourier optics</em>. Roberts and Company publishers, 2005.</p>
+</dd>
+<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Max Born and Emil Wolf. <em>Principles of Optics: Electromagnetic Theory of Propagation, Interference and Diffraction of Light</em>. Cambridge University Press, 7th edition, 1999.</p>
+</dd>
+<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Roger D Blandford and Kip S Thorne. Applications of classical physics. <em>lecture notes, California Institute of Technology</em>, 2012. URL: <a class="reference external" href="http://www.pmaweb.caltech.edu/Courses/ph136/yr2012/">http://www.pmaweb.caltech.edu/Courses/ph136/yr2012/</a>, <a class="reference external" href="https://doi.org/10.1142/9781860945359_0007">doi:10.1142/9781860945359_0007</a>.</p>
+</dd>
+<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>Michael R Teague. Deterministic phase retrieval: a Green's function solution. <em>J. Opt. Soc. Am.</em>, 73(11):1434, nov 1983. <a class="reference external" href="https://doi.org/10.1364/JOSA.73.001434">doi:10.1364/JOSA.73.001434</a>.</p>
+</dd>
+<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dd><p>David Paganin. <em>Coherent X-ray optics</em>. Number 6. Oxford University Press, USA, 2006.</p>
+</dd>
+<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dd><p>Jean-Pierre Guigay. Fourier-transform analysis of fresnel diffraction patterns and in-line holograms. <em>Optik</em>, 49:121–125, 1977.</p>
+</dd>
+<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
+<dd><p>D Paganin, S C Mayo, T E Gureyev, P R Miller, and S W Wilkins. Simultaneous phase and amplitude extraction from a single defocused image of a homogeneous object. <em>J. Microsc.</em>, 206(Pt 1):33–40, April 2002.</p>
+</dd>
+<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id8">8</a></span></dt>
+<dd><p>A Rosenhahn, F Staier, T Nisius, D Schäfer, R Barth, C Christophis, L M Stadler, S Streit-Nierobisch, C Gutt, A P Mancuso, and Others. Digital In-line Holography with femtosecond VUV radiation provided by the free-electron laser FLASH. <em>Opt. Express</em>, 17(10):8220–8228, 2009. <a class="reference external" href="https://doi.org/10.1364/oe.17.008220">doi:10.1364/oe.17.008220</a>.</p>
+</dd>
+<dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id9">9</a></span></dt>
+<dd><p>Peter Cloetens, W Ludwig, José Baruchel, D Van Dyck, J Van Landuyt, J P Guigay, and Michel Schlenker. Holotomography: Quantitative phase tomography with micrometer resolution using hard synchrotron radiation x rays. <em>Appl. Phys. Lett.</em>, 75:2912, 1999.</p>
+</dd>
+</dl>
+</div>
 </section>
 </section>
 </section>
