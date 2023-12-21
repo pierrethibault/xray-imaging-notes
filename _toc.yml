@@ -4,7 +4,7 @@
 format: jb-book
 root: intro
 parts:
-  - caption: Fundamentals of X-ray imaging
+  - caption: PhD Lectures on X-ray Imaging
     chapters:
     - glob: 0?_*
   - caption: Exercises and demos
